@@ -21,4 +21,5 @@ from app_soccerstats import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('details/<int:id>', views.details, name='details')
 ]

@@ -5,5 +5,12 @@
     <link rel="stylesheet" href="{% static "css/home.css" %}">
 
     <section class="HomeSection">
+        {% for jogador in jogadores %}
+            <a class="PlayerCard" href="{% url "details" jogador.id %}">
+                <h2> {{ jogador.nome }} </h2>
+                <h2> gols: {{ jogador.gols }} </h2>
+                <h2> passes: {{ jogador.passes }} </h2>
+            </a>
+        {% endfor %}
     </section>
 {% endblock content %}

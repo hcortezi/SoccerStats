@@ -4,9 +4,15 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
+    query = request.POST.get('query')
     listaJogadores = []
-    for jogador in jogador_collection.find({}):
-        listaJogadores.append(jogador)
+
+    if query == '':
+        for jogador in jogador_collection.find({}):
+            listaJogadores.append(jogador)
+    else:
+        for jogador in jogador_collection.find({"nome": query}):
+            listaJogadores.append(jogador)
 
     context = {"jogadores": listaJogadores}
     return render(request, 'home.html', context)

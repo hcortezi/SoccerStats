@@ -17,6 +17,47 @@
     border-radius: 15px;
 }
 
+.Search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 650px;
+    height: 40px;
+    /* background-color: blue; */
+}
+
+.SearchBar {
+    width: 590px;
+    height: 30px;
+    font-size: 17px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.SearchBar:focus {
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.205);
+}
+
+.SearchButton {
+    width: 50px;
+    height: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: rgb(0, 219, 0);
+    border-radius: 15px;
+    border: none;
+
+}
+
+.SearchButton:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.205);
+    cursor: pointer;
+}
+
 .PlayerCard {
     display: flex;
     padding: 10px;
